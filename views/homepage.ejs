@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function btn() {
+            alert("File uploaded Sucessfully")
+        }
+    </script>
+</head>
+<body>
+    <form action="/upload" method="POST" enctype="multipart/form-data" onsubmit="btn()">
+    <input type="file" name="profileimage"><br>
+    <br>
+    <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
