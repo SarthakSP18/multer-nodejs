@@ -28,7 +28,7 @@ app.use(express.urlencoded({extended:false}))
 app.get("/", (req,res)=>{
     return res.render("homepage")
 })
-app.post("/upload",upload.single("profileimage"),(req,res)=>{
+app.post("/upload",upload.fields([{name:"profileimage"},{name:"coverimage"}]),(req,res)=>{
     console.log(req.body);
     console.log(req.file);
     return res.redirect("/");
